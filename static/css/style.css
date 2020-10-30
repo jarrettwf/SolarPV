@@ -1,0 +1,90 @@
+header, main, #section2, #section4, #section5 {
+  display: flex;
+  justify-content: space-around;
+}
+main > div {
+  padding: 20px;
+}
+hr {
+  border: 1px solid black;
+}
+hr.clear {
+  border: 1px solid transparent;
+}
+#logo {
+  height: 15%;
+  width: 15%;
+}
+#titles {
+  margin-left: auto;
+  flex-basis: 500px;
+  text-align: center;
+}
+.button {
+  background-color: black;
+  color: white;
+  padding: 20px 20px;
+  margin-left: 4.5em;
+}
+#center {
+  text-align: center;
+  flex-basis: 500px;
+}
+input {
+  padding: 5px;
+  border: 1px solid #888;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+#warning {
+  display:none;
+  background: #e5e5e5;
+  color: #000;
+  position: relative;
+}
+#warning > ul {
+  text-align: left;
+  margin-left: 10em;
+}
+.valid {
+  color: green;
+}
+.invalid {
+  color: red;
+}
+
+/*Modal box zoning and positioning...*/
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1; 
+  padding-top: 35px; 
+  top: 0;
+  width: 35%; 
+  height: 100%; 
+  overflow: auto;
+}
+/*Modal box styling below*/
+.modal-reg {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #888;
+  width: 80%;
+  text-align: center;
+}
+/*close button for modal box*/
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

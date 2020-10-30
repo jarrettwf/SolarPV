@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>solarPV</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <img src="{% static 'img/Logo.png' %}" alt="SolarPV Logo" id="logo">
+        <div id="titles">
+            <h1>solarPV</h1>
+            <h2>Research & Development</h2>
+        </div>
+        <hr class="clear">
+        <nav>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact Us</a> |
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://twitter.com">Twitter</a>
+        </nav>
+    </header>
+    <hr>
+    <nav id="section2">
+        <a href="racktrack.html">Racks & Trackers</a>
+        <a href="pvmodule.html">PV Module</a>
+        <a href="pvsystem.html">PV Systems</a>
+        <a href="analytics.html">Data Analytics</a>
+        <a href="cybersecurity.html">Cybersecurity</a>
+    </nav>
+    
+    <hr>
+
+    <main>
+        <div>
+            <button class="button" id="regbtn">Register</button>
+            <button class="button" id="logbtn">Login</button>
+
+            <h4>PV Module</h4>
+            <ul>
+                <li>Testing & Certification</li>
+                <li>PV Rating</li>
+            </ul>
+            <h4>PV System Performance</h4>
+            <ul>
+                <li>Monitoring & Inspection</li>
+                <li>Performance Analysis</li>
+                <li>Compare System</li>
+                <li>Certification</li>
+            </ul>
+            <h4>Data Analytics</h4>
+            <ul>
+                <li>Module lifetime prediction</li>
+                <li>Energy Prediction</li>
+            </ul>
+            <h4>Cybersecurity and Smart Grid Technologies</h4>
+            <h4>Solar PV University</h4>
+        </div>
+        <hr>
+        <div id="center">
+            <p>Feature contents</p>
+        </div>
+        <hr>
+        <div>
+            <h3>News & Events</h3>
+            <p>Tesla climbs higher on Wall Street’s latest vote of confidence</p>
+            <p>5 Research Priorities for Making Sure More Solar PV Materials Get Recycled</p>
+            <p>Japan’s Quest for Green Energy Glory at Tokyo 2020</p>
+            <p>Hubble maps giant halo around Andromeda Galaxy</p>
+        </div>
+
+    <div id="regmodal" class="modal">
+      <div class="modal-reg">
+        <span class="close">X</span>
+        <h2>Register</h2>
+        <form action="insert.php" method="post">
+            Username: 
+            <input type="text" name="username" maxlength="8" required>
+            <br>
+            Password: 
+            <input type="password" id="password" name="password" required>
+            <br>
+            <div id="warning">
+            <h3>Password must have the following:</h3>
+            <ul>
+                <li id="lett" class="invalid">A lowercase letter</li>
+                <li id="cap" class="invalid">A capital (uppercase) letter</li>
+                <li id="num" class="invalid">A number</li>
+                <li id="len" class="invalid">Maximum 8 characters</li>
+            </ul>
+            </div>
+            <script src="{% static 'js/register.js' %}"></script>
+            First Name (optional): 
+            <input type="text" name="fname">
+            <br>
+            Middle Name (optional): 
+            <input type="text" name="mname">
+            <br>
+            Last Name: 
+            <input type="text" name="lname" required>
+            <br>
+            Gender: 
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <br>
+            Street Address: 
+            <input type="text" name="address" required>
+            <br>
+            City: 
+            <input type="text" name="city" required>
+            <br>
+            State: 
+            <input type="text" name="state" required>
+            <br>
+            Zip Code: 
+            <input type="text" name="zip" maxlength="5" required>
+            <br>
+            Email: 
+            <input type="email" name="email" required>
+            <br>
+            Phone Number: 
+            <input type="text" name="phone" maxlength="10" required>
+            <br>
+            Company: 
+            <input type="text" name="company" required>
+            <br>
+            <br>
+            <input type="submit" value="Submit" class="button">
+        </form>
+      </div>
+    </div>
+
+    </main>
+    
+    <hr>
+    
+    <footer>
+        <div id="section4">
+            <div>
+                <p>solarPV</p>
+                <address>123 Wallaby Way, 867-5309, SolarPV@asu.edu, www.placeholder.com</address>
+            </div>
+            <hr class="clear">
+            <p>Copyright 2020 <br> All Rights Reserved</p>
+        </div>
+        <hr>
+        <nav id="section5">
+            <a href="sitemap.html">Site Map</a>
+            <a href="terms.html">Terms & Conditions</a> 
+            <a href="privacy.html">Privacy Policy</a> 
+            <a href="about.html">About Us</a>
+        </nav>
+    </footer>
+
+<script>
+var modal = document.getElementById("regmodal");
+var btn = document.getElementById("regbtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+</script>
+
+</body>
+</html>
