@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'SolarPV',
+    'backend'
 
 
 ]
@@ -79,8 +80,12 @@ WSGI_APPLICATION = 'SolarPV.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'zcrkbjal',
+        'HOST' : 'hansken.db.elephantsql.com' ,
+        'USER' : 'zcrkbjal' ,
+        'PASSWORD' : 'VUDWictfIG1_5Z6oqUkCErEQdURH_sQ5' ,
+        'PORT' : '5432',
     }
 }
 
